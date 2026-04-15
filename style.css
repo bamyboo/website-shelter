@@ -1,0 +1,1529 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #d9d9d9;
+    font-family: "Anton", sans-serif;
+    color: #332001;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    touch-action: pan-y;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Main {
+    flex: 1 1 auto;
+}
+
+.KopfZeile {
+    display: flex;
+    background-color: rgba(223, 223, 223, 0.98);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.Name {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: left;
+    background-image: url('./projekt_pic/tieren/Pennie.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 15px;
+    margin-left: 30px;
+    user-select: none;
+
+    transition: transform 0.2s;
+}
+
+.Name:hover {
+    transform: translateY(-2px);
+}
+
+.Name:active {
+    transform: scale(0.99) translateY(1px);
+    filter: brightness(0.9);
+}
+
+.MainButton {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    padding-top: 20px;
+    margin-top: 0;
+    font-family: "Anton", sans-serif;
+}
+
+.MainButton button {
+    font-family: "Anton", sans-serif;
+    font-size: 14px;
+    color: #332001;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 3px;
+    background: none;
+
+    background-image: linear-gradient(to bottom, #995F03, #332001);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: transform 0.2s;
+}
+
+.MainButton button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to bottom, #322001 0%, #6b4200 40%, #f2a900 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.MainButton button:active {
+    transform: scale(0.9) translateY(1px);
+    filter: brightness(0.9);
+}
+
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.CloseBurger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* HauptBilderTieren*/
+
+.grid-container {
+    display: grid;
+    margin-bottom: 1%;
+    grid-template-columns: 320px 320px 320px 320px 320px;
+    grid-template-rows: 320px 320px;
+    gap: 1em;
+    grid-template-areas:
+        "box1 box2 box2 box3 box4"
+        "box1 box5 box6 box6 box4";
+
+    justify-content: center;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.2s;
+}
+
+.box img:active {
+    transform: scale(0.99) translateY(1px);
+    filter: brightness(0.9);
+    transition: transform 0.2s;
+}
+
+.box img:hover {
+    transform: scale(0.99)
+}
+
+/* Haupt Beschreibung */
+
+.HauptBeschreibung {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    background: linear-gradient(to bottom, #322001 0%, #6b4200 40%, #f2a900 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.HauptBeschreibung1 {
+    font-size: 25px;
+}
+
+.TierWähler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-bottom: 5%;
+
+}
+
+.TierWähler button {
+    font-family: "Anton", sans-serif;
+    font-size: 20px;
+    color: #332001;
+    font-weight: 500;
+    border: 2px solid rgb(206, 204, 204);
+    border-radius: 10px;
+    padding: 5px 5px;
+
+    cursor: pointer;
+    letter-spacing: 3px;
+    background: none;
+
+    background-image: linear-gradient(to bottom, #995F03, #332001);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 2%;
+
+    transition: transform 0.2s;
+}
+
+.TierWähler button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to bottom, #322001 0%, #6b4200 40%, #f2a900 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.TierWähler button:active {
+    transform: scale(0.9) translateY(1px);
+    filter: brightness(0.9);
+}
+
+/* Tieren Grid */
+.animals-grid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    text-align: center;
+    background-color: rgb(206, 204, 204);
+    padding-bottom: 2%;
+}
+
+.animal-card img {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+
+    padding-top: 5%;
+
+
+    transition: transform 0.2s;
+
+}
+
+.animal-card img:hover {
+    transform: scale(0.99);
+
+}
+
+.animal-card p {
+    font-family: "Anton", sans-serif;
+    font-size: 14px;
+    color: #332001;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.animal-card h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 18px;
+    color: #332001;
+    font-weight: 500;
+}
+
+.animal-card button {
+    font-family: "Anton", sans-serif;
+    font-size: 20px;
+    color: #332001;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 5px 5px;
+
+    background-image: linear-gradient(to bottom, #995F03, #332001);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: transform 0.2s;
+}
+
+.animal-card button:hover {
+    transform: translateY(-2px);
+}
+
+.animal-card button:active {
+    transform: scale(0.9) translateY(1px);
+    filter: brightness(0.9);
+
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1%;
+    padding-bottom: 1%;
+}
+
+.pagination button {
+    font-family: "Anton", sans-serif;
+    font-size: 13px;
+    color: #332001;
+    font-weight: 300;
+    border: 1px solid rgb(206, 204, 204);
+    border-radius: 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+    background: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.2s;
+}
+
+.pagination button:hover {
+    transform: translateY(-1px);
+}
+
+.pagination button:active {
+    transform: scale(0.9) translateY(1px);
+    filter: brightness(0.9);
+}
+
+/* Über Uns */
+
+.ÜberUns {
+    font-size: 20px;
+    margin-left: 2%;
+    background-image: linear-gradient(to bottom, #332001 0%, #995F03 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0px;
+    width: 50%;
+    float: left;
+    letter-spacing: 1px;
+}
+
+.ÜberUns1 {
+    font-size: 42px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Kontaktieren */
+
+.KontaktierenLinks {
+    text-align: right;
+    color: hsl(37, 96%, 31%);
+    opacity: 49%;
+    font-size: 15px;
+    width: 47%;
+    float: right;
+    background-color: #EFDEBA;
+    margin-right: 1%;
+    letter-spacing: 2px;
+    font-weight: 300;
+    border-radius: 20px;
+}
+
+.KontaktierenLinks h1,
+.KontaktierenLinks h2 {
+    font-weight: 200;
+}
+
+.KontaktierenLinks h1 {
+    margin-top: 1%;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+
+.KontaktierenLinks h2 {
+    font-size: 20px;
+}
+
+.KontaktierenLinks a {
+    color: #332001;
+}
+
+.KontaktImage {
+    display: none;
+    margin: 0 auto;
+    max-width: 20px;
+    max-height: 20px;
+    transform: rotate(90deg);
+}
+
+
+/* Footer */
+
+.footer {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    text-align: center;
+    background-color: #322001;
+    clear: both
+        /*float elements*/
+
+
+}
+
+.FooterText {
+    font-family: "Anton", sans-serif;
+    font-weight: lighter;
+    color: #D8AB64;
+}
+
+h1.FooterText {
+    font-size: 20px;
+}
+
+h2.FooterText  {
+    font-size: 15px;
+}
+
+h3.footer  {
+    font-size: 12px;
+    opacity: 50%;
+
+}
+
+.footer a {
+    opacity: 50%;
+}
+
+/* Animal Page */
+
+
+.TextAnimalPage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 1%;
+
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: 26px;
+}
+
+.BannerImageAnimalPage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+}
+
+.BannerImageAnimalPagePhoneView {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+
+.TextDanke {
+    color: #fff;
+    padding: 20px 30px;
+
+    color: #332001;
+    font-weight: 500;
+    border: none;
+    letter-spacing: 1px;
+    background: none;
+
+    background-image: linear-gradient(to bottom, #483742, #EFE2EB);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: transform 0.2s;
+    position: absolute;
+    top: 27%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+}
+
+.TextDanke h1 {
+    padding: auto 15px;
+}
+
+#AnimalFileKontaktBtn {
+    font-family: "Anton", sans-serif;
+    color: #d3c7cf;
+    font-weight: 500;
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background: none;
+    text-decoration: underline #d3c7cf;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: transform 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+}
+
+#AnimalFileKontaktBtn:hover {
+    transform: translate(-50%, -50%) translateY(-2px);
+    background: linear-gradient(to bottom, #483742 0%, #EFE2EB 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#AnimalFileKontaktBtn:active {
+    transform: translate(-50%, -50%) scale(0.9) translateY(1px);
+    filter: brightness(0.9);
+}
+
+.KontaktSection {
+    background-color: #bdbbbb;
+    padding: 20px 30px;
+    border: 1px solid rgb(206, 204, 204);
+    border-radius: 12px;
+    margin: 50px;
+    margin-top: 0;
+}
+
+.KontaktSection h1 {
+    font-family: "Anton", sans-serif;
+    color: #332001;
+    font-weight: 500;
+    font-size: 46px;
+    letter-spacing: 1px;
+    background-image: url('./projekt_pic/tieren/Pennie.jpg');
+    background-position: bottom;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.2s;
+    float: right;
+    clear: right;
+    max-width: 500px;
+    margin-right: 10%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.form-container {
+    background: #d3c7cf;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 550px;
+    max-height: 700px;
+    padding: 20px 30px;
+    float: right;
+    clear: right;
+    margin-right: 10%;
+    margin-top: 3%;
+    letter-spacing: 1px;
+    color: #483742;
+}
+
+.form-container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.3s;
+}
+
+.BannerImageAnimalPageKatze {
+    width: auto;
+    height: 1000px;
+    float: left;
+    margin: 50px 100px;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.BannerImageAnimalPageKatze img {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.BannerImageAnimalPageKatze:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.3s;
+}
+
+.form-container h2 {
+    color: #483742;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.form-container label {
+    color: #483742;
+    ;
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.form-container input,
+.form-container textarea {
+    font-family: "Anton", sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 10px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: #d9d9d9;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-container button {
+    font-family: "Anton", sans-serif;
+    width: 100%;
+    padding: 12px;
+    background: #483742;
+    color: #d3c7cf;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background: #2b2127;
+    color: #d3c7cf;
+
+}
+
+.FloatHelp {
+    clear: both;
+    /*Help Elements to float*/
+
+}
+
+/* Media for large screens */
+
+@media screen and (max-width:1840px) {
+    .TextAnimalPage {
+        font-size: 24px;
+    }
+
+    .TextDanke {
+        top: 26%;
+        left: 28%;
+        max-width: 750px;
+    }
+
+
+
+}
+
+@media screen and (max-width:1790px) {
+    .HauptBeschreibung {
+        max-width: 1000px;
+    }
+
+    .grid-container {
+        grid-template-columns: 320px 320px 320px 320px;
+        grid-template-rows: 320px 320px;
+        grid-template-areas:
+            "box2 box2 box3 box4"
+            "box5 box6 box6 box4";
+    }
+
+    .box[style*="box1"] {
+        display: none;
+    }
+
+    .ÜberUns {
+        font-size: 18px;
+        margin-left: 1%;
+    }
+
+    .ÜberUns1 {
+        font-size: 38px;
+    }
+
+    .KontaktierenLinks {
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+    .KontaktierenLinks h1,
+    .KontaktierenLinks h2 {
+        font-weight: 100;
+    }
+
+    .KontaktierenLinks h1 {
+        font-size: 38px;
+    }
+
+    .KontaktierenLinks h2 {
+        font-size: 18px;
+    }
+
+    .TextAnimalPage {
+        font-size: 22px;
+    }
+
+    .TextDanke {
+        max-width: 710px;
+    }
+
+    .form-container {
+        max-width: 450px;
+    }
+
+    .BannerImageAnimalPageKatze {
+        max-height: 900px;
+    }
+
+    .KontaktSection h1 {
+        margin-right: 12%;
+        max-width: 400px;
+    }
+
+}
+
+@media screen and (max-width:1590px) {
+    .form-container {
+        max-width: 400px;
+    }
+
+    .BannerImageAnimalPageKatze {
+        max-height: 850px;
+    }
+
+    .KontaktSection h1 {
+        margin-right: 13%;
+        font-size: 38px;
+        max-width: 350px;
+
+    }
+
+}
+
+@media screen and (max-width:1504px) {
+
+    .ÜberUns {
+        font-size: 16px;
+        margin-left: 1%;
+    }
+
+    .ÜberUns1 {
+        font-size: 30px;
+    }
+
+    .TextAnimalPage {
+        font-size: 16px;
+    }
+
+    .TextDanke {
+        max-width: 600px;
+    }
+
+    .form-container {
+
+        margin-top: 1%;
+    }
+
+    .BannerImageAnimalPageKatze {
+        max-height: 750px;
+    }
+
+    .KontaktSection h1 {
+        margin-right: 15%;
+        margin-top: 3%;
+        font-size: 32px;
+        max-width: 320px;
+
+    }
+
+}
+
+@media screen and (max-width:1425px) {
+
+    .HauptBeschreibung {
+        max-width: 850px;
+    }
+
+    .grid-container {
+        grid-template-columns: 320px 320px 320px;
+        grid-template-rows: 320px 320px;
+        grid-template-areas:
+            "box2 box2 box3 "
+            "box5 box6 box6 ";
+    }
+
+    .box[style*="box4"] {
+        display: none;
+    }
+
+    .ÜberUns {
+        font-size: 14px;
+        margin-left: 1%;
+    }
+
+    .ÜberUns1 {
+        font-size: 32px;
+    }
+
+    .KontaktierenLinks {
+        font-size: 11px;
+        font-weight: 200;
+    }
+
+    .KontaktierenLinks h1,
+    .KontaktierenLinks h2 {
+        font-weight: 100;
+    }
+
+    .KontaktierenLinks h1 {
+        font-size: 32px;
+    }
+
+    .KontaktierenLinks h2 {
+        font-size: 16px;
+    }
+
+    #AnimalFileKontaktBtn {
+        font-weight: 400;
+        font-size: 24px;
+        top: 48%;
+        left: 30%;
+
+    }
+
+    .form-container {
+        max-width: 350px;
+        padding: 10px 20px;
+        margin-right: 10%;
+        margin-top: 1%;
+    }
+
+    .BannerImageAnimalPageKatze {
+        max-height: 650px;
+        margin-left: 7%;
+    }
+
+    .KontaktSection h1 {
+        margin-right: 16%;
+        margin-top: 1%;
+        font-size: 26px;
+        max-width: 280px;
+
+    }
+
+    .form-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: lighter;
+    }
+
+    .form-container label {
+        margin-bottom: 3px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .form-container textarea {
+        min-height: 80px;
+    }
+
+    .form-container button {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: smaller;
+    }
+
+
+}
+
+@media screen and (max-width:1265px) {
+
+    .ÜberUns1,
+    .KontaktierenLinks,
+    .ÜberUns {
+        letter-spacing: 0;
+    }
+
+
+
+    #AnimalFileKontaktBtn {
+        font-weight: 400;
+        font-size: 22px;
+        top: 46%;
+        left: 30%;
+    }
+
+
+    .TextAnimalPage {
+        font-size: 14px;
+    }
+
+    .TextDanke {
+        max-width: 500px;
+    }
+
+    .form-container {
+        max-width: 300px;
+        padding: 5px 10px;
+        margin-right: 10%;
+        margin-top: 1%;
+    }
+
+    .BannerImageAnimalPageKatze {
+        max-height: 500px;
+        margin-left: 7%;
+    }
+
+    .KontaktSection h1 {
+        margin-right: 12%;
+        margin-top: 1%;
+        font-size: 14px;
+
+
+
+    }
+
+    .form-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: lighter;
+    }
+
+    .form-container label {
+        margin-bottom: 3px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .form-container textarea {
+        min-height: 60px;
+    }
+
+    .form-container button {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: smaller;
+    }
+
+
+
+}
+
+@media screen and (max-width:1075px) {
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        padding-bottom: 1%;
+    }
+
+    .animal-card img {
+        width: 310px;
+        height: 310px;
+        padding-top: 1%;
+    }
+
+    .animal-card button {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .HauptBeschreibung {
+        max-width: 650px;
+        font-size: 16px;
+    }
+
+    .grid-container {
+        grid-template-columns: 320px 320px;
+        grid-template-rows: 320px 320px;
+        grid-template-areas:
+            "box2 box2 "
+            "box5 box3 ";
+        gap: 3em;
+    }
+
+    .box[style*="box6"] {
+        display: none;
+    }
+
+    #AnimalFileKontaktBtn {
+        font-weight: 400;
+        font-size: 20px;
+        top: 44%;
+        left: 28%;
+    }
+
+    .TextAnimalPage {
+        font-size: 10px;
+    }
+
+    .TextDanke {
+        max-width: 400px;
+    }
+
+    .form-container {
+        max-width: 250px;
+        padding: 5px 10px;
+        margin-right: 12%;
+        margin-top: 2%;
+    }
+
+    .BannerImageAnimalPageKatze {
+        max-height: 450px;
+        margin-left: 5%;
+    }
+
+    .KontaktSection h1 {
+        margin-right: 13%;
+        margin-top: 2%;
+        font-size: 12px;
+    }
+
+    .form-container h2 {
+        margin-bottom: 10px;
+        font-weight: lighter;
+        font-size: 16px;
+    }
+
+    .form-container label {
+        margin-bottom: 2px;
+        font-size: 12px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .form-container textarea {
+        min-height: 50px;
+    }
+
+    .form-container button {
+        width: 100%;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+
+    .FooterText h1 {
+        font-size: 20px;
+    }
+
+    .FooterText h2 {
+        font-size: 12px;
+    }
+
+    .footer h3 {
+        font-size: 10px;
+
+
+    }
+
+}
+
+@media screen and (max-width:975px) {
+    .ÜberUns {
+        letter-spacing: 0;
+        font-size: smaller;
+    }
+
+    .Name {
+        font-size: 30px;
+        letter-spacing: 8px;
+        margin-left: 10px;
+    }
+
+    .MainButton button {
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    #AnimalFileKontaktBtn {
+        font-weight: 300;
+        font-size: 16px;
+        top: 44%;
+        left: 28%;
+    }
+
+    .form-container {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .BannerImageAnimalPageKatze {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: 7%;
+
+    }
+
+    .KontaktSection h1 {
+        margin-right: 1%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .FooterText h1 {
+        font-size: 22px;
+    }
+
+    .FooterText h2 {
+        font-size: 12px;
+    }
+
+    .footer h3 {
+        font-size: 10px;
+    }
+
+
+}
+
+@media screen and (max-width:800px) {
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        padding-bottom: 1%;
+    }
+
+    .grid-container {
+        gap: 1em;
+    }
+
+    .animal-card img {
+        width: 250px;
+        height: 250px;
+        padding-top: 1%;
+    }
+
+    .animal-card button {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .ÜberUns {
+        font-size: smaller;
+
+    }
+
+    .KontaktierenLinks {
+        margin-top: 3%;
+    }
+
+    #AnimalFileKontaktBtn {
+        font-weight: 200;
+        font-size: 12px;
+        top: 44%;
+        left: 28%;
+    }
+
+    .TextAnimalPage {
+        font-size: 8px;
+    }
+
+    .TextDanke {
+        max-width: 300px;
+    }
+}
+
+/* Media for small screens */
+
+@media screen and (max-width:480px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 210px 210px;
+        grid-template-areas:
+            "box5 box4"
+            "box3 box4";
+    }
+
+    .box1,
+    .box2,
+    .box6 {
+        display: none;
+    }
+
+    .box[style*="box2"] {
+        display: none;
+    }
+
+
+    .box[style*="box3"],
+    .box[style*="box4"],
+    .box[style*="box5"] {
+        display: block;
+    }
+
+    .MainButton {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        background: rgba(228, 228, 228, 0.9);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateY(-100%);
+        transition: 0.3s ease;
+    }
+
+    .MainButton.active {
+        transform: translateY(0);
+    }
+
+    .MainButton {
+        font-size: 24px;
+        margin: 15px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .HauptBeschreibung {
+        font-size: 14px;
+        max-width: 400px;
+        letter-spacing: 0;
+    }
+
+    .HauptBeschreibung1 {
+        font-size: 20px;
+        margin-top: 0;
+        letter-spacing: 0;
+    }
+
+    .TierWähler {
+        gap: 3%;
+    }
+
+    .TierWähler button {
+        font-size: 15px;
+        font-weight: 400;
+        padding: 5px 5px;
+        letter-spacing: 1px;
+        margin-top: 1%;
+    }
+
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 0;
+    }
+    
+
+    .animal-card img {
+        width: 190px;
+        height: 190px;
+        padding-top: 5%;
+    }
+
+    .animal-card button {
+        font-size: 10px;
+        font-weight: 300;
+        letter-spacing: 0;
+       
+    }
+
+    .animal-card p {
+        letter-spacing: 0;
+        font-size: 10px;
+    }
+
+    .animal-card h3 {
+        letter-spacing: 1;
+        font-size: 16px;
+    }
+
+    .ÜberUns {
+        font-size: 15px;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 0px;
+        padding-right: 10px;
+        float: none;
+        width: 100%;
+        max-width: 450;
+    }
+
+    .ÜberUns1 {
+        font-size: 25px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .KontaktierenLinks {
+        text-align: center;
+        font-size: 12px;
+        float: none;
+        width: 100%;
+        font-weight: 200;
+    }
+
+    .KontaktierenLinks h1,
+    .KontaktierenLinks h2 {
+        font-weight: 100;
+    }
+
+    .KontaktInfo {
+        display: none;
+        cursor: pointer;
+
+        transition: 0.3s ease;
+    }
+
+    .KontaktierenLinks h1 {
+        margin-top: 1%;
+        font-size: 25px;
+        animation: TransformBtn 1s infinite alternate;
+    }
+
+    .KontaktierenLinks h2 {
+        font-size: 15px;
+    }
+
+    .KontaktImage {
+        display: block;
+        animation: rotateArrow 1s infinite alternate;
+        margin-bottom: 3%;
+    }
+
+    @keyframes rotateArrow {
+        from {
+            transform: rotate(90deg) translateX(0);
+        }
+
+        to {
+            transform: rotate(90deg) translateX(5px);
+        }
+    }
+
+    @keyframes TransformBtn {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(-3px);
+        }
+    }
+
+    .BannerImageAnimalPage {
+        display: none;
+    }
+
+    .BannerImageAnimalPagePhoneView {
+        display: block;
+        padding: 0 15px;
+         
+           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  background-color: #bdbbbb;
+    }
+
+    .BannerImageAnimalPagePhoneView img {
+        display: block;
+  object-fit: cover; 
+    }
+
+    .BannerImageAnimalPageKatze {
+        display: none;
+    }
+
+    .TextAnimalPage {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .TextDanke {
+        text-align: center;
+        top: auto;
+        left: auto;
+        transform: none;
+        font-size: 15px;
+        letter-spacing: 0;
+        border-radius: 6px;
+        background-image: none;
+        background-clip: border-box;
+        -webkit-background-clip: border-box;
+        -webkit-text-fill-color: unset;
+        color: #63535d;
+        transition: transform 0.2s;
+        position: relative;
+        max-width: 100%;
+        margin-top: 15px;
+        display: inline;
+        padding: 4px 8px;
+        background: rgb(239, 226, 235, 0.2);
+        line-height: 1.6;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
+
+    #AnimalFileKontaktBtn {
+        display: none;
+    }
+
+    .form-container {
+        max-width: 100%;
+        float: none;
+        background-image: url(./projekt_pic/Banner_Bild_Katze.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 550px;
+
+    }
+
+    .form-container h2 {
+        color: #483742;
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 18px;
+    }
+
+    .form-container label {
+        color: #483742;
+        display: block;
+        margin-bottom: 5px;
+        letter-spacing: 0px;
+        font-size: 15px;
+
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-family: "Anton", sans-serif;
+        width: 100%;
+        border: none;
+        font-size: 15px;
+        background-color: rgba(189, 187, 187, 0.8);
+
+    }
+
+    .form-container textarea {
+        min-height: 100px;
+    }
+
+    .form-container button {
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: lighter;
+        margin-top: 25px;
+    }
+
+    .KontaktSection {
+        margin:0;
+    }
+
+    .KontaktSection h1 {
+        font-weight: 300;
+        font-size: 20px;
+        letter-spacing: 0px;
+        margin: 0;
+        float: none;
+        max-width: 500px;
+        margin-bottom: 10px;
+    }
+
+  .FooterText {
+    font-family: "Anton", sans-serif;
+    font-weight: lighter;
+    color: #D8AB64;
+}
+
+.FooterText h1 {
+    font-size: 20px important!;
+}
+
+.FooterText h2 {
+    font-size: 10px;
+}
+
+.footer h3 {
+    font-size: 10px;
+    opacity: 50%;
+
+}
+}

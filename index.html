@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Friends</title>
+    <link rel="stylesheet" href="./style.css">
+    </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="KopfZeile">
+            <h1 onclick="goHome()" class="Name"> Furry Friends</h1>
+            <div class="MainButton">
+                <button onclick="goHome()">Home</button>
+                <button onclick="showAnimalsByPhoto()">Animals</button>
+                <button onclick="showFooter()">About us</button>
+            </div>
+            <div class="burger">☰</div>
+            <div class="CloseBurger" onclick="Cross()">✕</div>
+        </header>
+
+        <div id="header" class="Main">
+
+            <div class="grid-container">
+                <div class="box" style="grid-area: box1">
+                    <img onclick="showDogs(),showAnimalsByPhoto()" src="./projekt_pic/1.jpg">
+                </div>
+                <div class="box" style="grid-area: box2">
+                    <img onclick="showDogs(),showAnimalsByPhoto()" src="./projekt_pic/2.jpg">
+                </div>
+                <div class="box" style="grid-area: box3">
+                    <img onclick="showDogs(),showAnimalsByPhoto()" src="./projekt_pic/3.jpg">
+                </div>
+                <div class="box" style="grid-area: box4">
+                    <img onclick="showDogs(),showAnimalsByPhoto()" src="./projekt_pic/4.jpg">
+                </div>
+                <div class="box" style="grid-area: box5">
+                    <img onclick="showCats(),showAnimalsByPhoto()" src="./projekt_pic/5.jpg">
+                </div>
+                <div class="box" style="grid-area: box6">
+                    <img onclick="showDogs(),showAnimalsByPhoto()" src="./projekt_pic/6.jpg">
+                </div>
+            </div>
+
+
+
+
+            <div class="HauptBeschreibung">
+                <p class="HauptBeschreibung1">Lernen Sie unsere Tiere kennen!</p>
+                <p>
+                    Jeder dieser wundervollen Begleiter wartet auf sein Zuhause für immer.
+                    Stöbern Sie durch unsere Tiere und finden Sie
+                    Ihren neuen besten Freund.
+                </p>
+            </div>
+
+            <section id="Tieren" class="Tieren">
+                <div class="TierWähler">
+                    <button onclick="showAll(),scrollToAnimals()" class="Alle">Alle Tiere</button>
+                    <button onclick="showDogs(),scrollToAnimals()" id="Hunden" class="Hunden">Hunden</button>
+                    <button onclick="showCats(),scrollToAnimals()" id="Katzen" class="Katzen">Katzen</button>
+                    <button onclick="ShowRodents(),scrollToAnimals()" id="Nagetieren"
+                        class="Nagetieren">Nagetiere</button>
+                </div>
+                <section id="animals-list" class="animals-grid"></section>
+                <div class="pagination">
+                    <button id="LoadMoreBtn" onclick="loadMore()">Mehr laden</button>
+                </div>
+            </section>
+
+
+
+
+            <section>
+                <div class="ÜberUnsSection">
+                    <div class="ÜberUns">
+                        <p class="ÜberUns1">Über unser Tierheim</p>
+                        <p>
+                            Wir von Paws & Hearts setzen uns mit Herzblut für die Rettung und Vermittlung von Tieren in
+                            Not ein.
+                            Seit über 15 Jahren bieten wir ausgesetzten und obdachlosen Tieren Schutz,
+                            medizinische Versorgung und Liebe, bis sie ihr endgültiges Zuhause gefunden haben.
+                            Unsere Mission ist einfach: Wir möchten eine Welt schaffen,
+                            in der jedes Tier ein liebevolles Zuhause hat. Wir glauben,
+                            dass Adoption Leben rettet, und wir möchten den Adoptionsprozess so einfach und
+                            freudvoll
+                            wie möglich gestalten.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="Kontakt">
+                <div class="KontaktierenLinks">
+                    <h1 id="KontaktHeader">Kontaktieren Sie uns</h1>
+                    <div class="KontaktInfo">
+                        <h2>Besuchen Sie uns</h2>
+                        <a>123 Shelter Lane, Petville, ST 12345</a>
+                        <h2>Rufen Sie uns an</h2>
+                        <a href="tel:+15551234567">(555) 123-4567</a>
+                        <h2>Schreiben Sie uns eine E-Mail</h2>
+                        <a href="mailto:hello@pawsandhearts.org">hello@pawsandhearts.org</a>
+                    </div>
+                </div>
+                <img class="KontaktImage" id="KontaktImage" src="./projekt_pic/wing.png" alt="Klicken Sie hier">
+            </section>
+        </div>
+
+        <footer id="footer" class="footer">
+            <br>
+            <h1 class="FooterText">Furry Friends</h1>
+            <h2 class="FooterText">Wir verändern Leben – eine Adoption nach der anderen.</h2>
+            <br><br>
+            <a class="FooterText" href="">Datenschutzerklärung</a>
+            <a class="FooterText" href="">Nutzungsbedingungen</a>
+            <a class="FooterText" href="">Freiwilligenarbeit</a>
+            <br><br><br>
+            <h3 class="FooterText">© 2026 Paws & Hearts Tierheim. Alle Rechte vorbehalten.</h2>
+        </footer>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

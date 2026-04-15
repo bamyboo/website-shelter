@@ -1,0 +1,110 @@
+[
+    {
+        "id": "1",
+        "name": "Alexa",
+        "type": "Hunden",
+        "age": "1 Jahr",
+        "sex": "weiblich",
+        "image": "projekt_pic/tieren/Alexa.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Ben und Bonnie",
+        "type": "Nagetieren",
+        "age": "5 Monaten",
+        "sex": "männlich und weiblich",
+        "image": "projekt_pic/tieren/Ben_und_Bonnie.jpg"
+
+    },
+    {
+        "id": "3",
+        "name": "Bennet",
+        "type": "Hunden",
+        "age": "5 Monaten",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Bennet.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Juni",
+        "type": "Katzen",
+        "age": "3 Monaten",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Juni.jpg"
+    },
+       {
+        "id": "5",
+        "name": "Luna",
+        "type": "Katzen",
+        "age": "1 Jahr",
+        "sex": "weiblich",
+        "image": "projekt_pic/tieren/Luna.jpg"
+    },
+       {
+        "id": "6",
+        "name": "Martin",
+        "type": "Katzen",
+        "age": "2 Jahren",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Martin.jpg"
+    },
+       {
+        "id": "7",
+        "name": "Pennie",
+        "type": "Nagetieren",
+        "age": "3 Monaten",
+        "sex": "weiblich",
+        "image": "projekt_pic/tieren/Pennie.jpg"
+    },
+       {
+        "id": "8",
+        "name": "Rey",
+        "type": "Hunden",
+        "age": "3 Jahren",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Rey.jpg"
+    },
+       {
+        "id": "9",
+        "name": "Zhaoli",
+        "type": "Nagetieren",
+        "age": "2 Monaten",
+        "sex": "weiblich",
+        "image": "projekt_pic/tieren/Zhaoli.jpg"
+    }, {
+        "id": "10",
+        "name": "Wesley",
+        "type": "Katzen",
+        "age": "1 Jahr",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Wesley.jpg"
+    }, {
+        "id": "11",
+        "name": "Miro",
+        "type": "Katzen",
+        "age": "2 Jahren",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Miro.jpg"
+    }, {
+        "id": "12",
+        "name": "Bruce",
+        "type": "Hunden",
+        "age": "9 Monaten",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Bruce.jpg"
+    }, {
+        "id": "13",
+        "name": "Pablo",
+        "type": "Hunden",
+        "age": "2 Jahren",
+        "sex": "männlich",
+        "image": "projekt_pic/tieren/Pablo.jpg"
+    }, {
+        "id": "14",
+        "name": "Dino",
+        "type": "Hunden",
+        "age": "1 Jahr",
+        "sex": "weiblich",
+        "image": "projekt_pic/tieren/Dino.jpg"
+    }
+]

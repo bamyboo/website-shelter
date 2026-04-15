@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you</title>
+    <link rel="stylesheet" href="./style.css">
+    </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="AnimalFileBody">
+
+            <header class="KopfZeile">
+                <h1 onclick="GoToMainPage()"    class="Name"> Furry Friends</h1>
+                <div class="MainButton">
+                    <button onclick="GoToMainPage()">Home</button>
+                    <button onclick="ScrollToSelection()">Animals</button>
+                    <button onclick="ScrollToMainPageFooter()">About us</button>
+                </div>
+            <div class="burger">☰</div>
+            <div class="CloseBurger" onclick="Cross()">✕</div>
+            </header>
+
+
+            <div class="TextAnimalPage">
+                <img class="BannerImageAnimalPage" src="./projekt_pic/Banner_Bild.jpg" alt="Dog Banner">
+                <img class="BannerImageAnimalPagePhoneView" src="./projekt_pic/Banner_Bild_Phone_View.jpg" alt="Dog Banner Phone View" >
+                <h1 class="TextDanke">Danke, dass Sie sich für unser Heim voller Pfoten entschieden haben! Wenn Sie einem Tier Liebe schenken möchten, melden Sie sich gerne bei uns
+                </h1>
+                <button id="AnimalFileKontaktBtn" onclick="ScrollToKontaktForm()">Kontaktieren</button>
+            </div>
+
+
+            <section>
+                <div id="KontaktSection"  class="KontaktSection">
+                    <img class="BannerImageAnimalPageKatze" src="./projekt_pic/Banner_Bild_Katze.jpg" alt="Cat Banner">
+                    <h1>Oder wir melden uns einfach bei Ihnen!</h1>
+                    <div class="form-container">
+                        <h2>Kontaktformular</h2>
+                        <form action="#" method="post">
+                            <label for="name">Vorname</label>
+                            <input type="text" id="name" name="name" placeholder="Ihr Vorname" required>
+                            <label for="surname">Nachname</label>
+                            <input type="text" id="surname" name="surname" placeholder="Ihr Nachname" required>
+                            <label for="email">E-Mail</label>
+                            <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" placeholder="Ihre Nachricht" required></textarea>
+                            <button type="submit">Senden</button>
+                        </form>
+                    </div>
+                    <h3 class="FloatHelp"></h3>
+                </div>
+            </section>
+
+            <footer id="footer" class="footer">
+                <br>
+                <h1 class="FooterText">Furry Friends</h1>
+                <h2 class="FooterText">Wir verändern Leben – eine Adoption nach der anderen.</h2>
+                <br><br>
+                <a class="FooterText" href="">Datenschutzerklärung</a>
+                <a class="FooterText" href="">Nutzungsbedingungen</a>
+                <a class="FooterText" href="">Freiwilligenarbeit</a>
+                <br><br><br>
+                <h3 class="FooterText">© 2026 Paws & Hearts Tierheim. Alle Rechte vorbehalten.</h3>
+            </footer>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./animal.js"></script>
+</body>
+
+</html>
