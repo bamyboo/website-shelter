@@ -9,4 +9,4 @@ The project is built using HTML, CSS, and JavaScript.
 The website is responsive and adapted for different screen sizes.
 
 ## 🌐 Live Demo
-https://your-username.github.io/your-repository/
+https://bamyboo.github.io/website-shelter/
